@@ -1,0 +1,47 @@
+{
+    "name": "yj",
+    "version": "1.0.0",
+    "description": "A minimal tray app for playing family voice clips",
+    "main": "dist/main.js",
+    "scripts": {
+        "build": "tsc && tsc -p tsconfig.renderer.json && cp src/renderer.html dist/",
+        "start": "npm run build && electron .",
+        "dev": "npm run build && electron .",
+        "package": "npm run build && electron-builder --mac",
+        "package:all": "npm run build && electron-builder -mwl"
+    },
+    "keywords": [],
+    "author": "",
+    "license": "MIT",
+    "devDependencies": {
+        "@types/node": "^20.10.0",
+        "electron": "^28.0.0",
+        "electron-builder": "^24.9.1",
+        "typescript": "^5.3.2"
+    },
+    "build": {
+        "appId": "com.yj.familyvoices",
+        "productName": "YJ",
+        "files": [
+            "dist/**/*",
+            "assets/**/*"
+        ],
+        "mac": {
+            "category": "public.app-category.utilities",
+            "target": [
+                "dmg",
+                "zip"
+            ],
+            "icon": "assets/icon.png"
+        },
+        "win": {
+            "target": "nsis",
+            "icon": "assets/icon.png"
+        },
+        "linux": {
+            "target": "AppImage",
+            "category": "Utility",
+            "icon": "assets/icon.png"
+        }
+    }
+}

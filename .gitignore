@@ -1,0 +1,18 @@
+node_modules/
+dist/
+*.log
+.DS_Store
+
+# Build outputs
+*.dmg
+*.zip
+*.exe
+*.AppImage
+release/
+
+# IDE
+.vscode/
+.idea/
+
+# User data (optional - uncomment if you don't want to track clips)
+# clips/
