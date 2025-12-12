@@ -10,9 +10,25 @@
         "package": "npm run build && electron-builder --mac",
         "package:all": "npm run build && electron-builder -mwl"
     },
-    "keywords": [],
+    "keywords": [
+        "electron",
+        "tray",
+        "voice",
+        "audio",
+        "family",
+        "macos",
+        "menu-bar"
+    ],
     "author": "",
     "license": "MIT",
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/youminkim/yj.git"
+    },
+    "bugs": {
+        "url": "https://github.com/youminkim/yj/issues"
+    },
+    "homepage": "https://github.com/youminkim/yj#readme",
     "devDependencies": {
         "@types/node": "^20.10.0",
         "electron": "^28.0.0",
